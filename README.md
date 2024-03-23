@@ -11,14 +11,14 @@ The `server` folder contains the Python backend code using FastAPI to handle cha
 1. Navigate to the `server` folder.
 2. Install the required dependencies using pip:
 
-'''
+"""
 pip install fastapi uvicorn
-'''
+"""
 
 3. Run the server using UVicorn:
-'''
+"""
 uvicorn main:app --reload
-'''
+"""
 
 
 ## Website
