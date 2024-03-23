@@ -1,0 +1,22 @@
+{
+    "book_a_room": {
+      "Check in Date": "",
+      "Check Out Date": "",
+      "Nº Adults": "",
+      "Nº Children": "",
+      "Special Request": ""
+    },
+    "spa": {
+      "Treatment": "",
+      "Date": "",
+      "Time": "",
+      "Therapist": ""
+    },
+    "quote": {
+      "Name": "",
+      "Email": "",
+      "Phone Number": "",
+      "Service": "",
+      "Additional Notes": ""
+    }
+  }

@@ -1,0 +1,249 @@
+/* Estilos para o corpo da página */
+body {
+    background-color: #222;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-size: 0.9vw;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Divide a tela em 3 colunas iguais */
+    grid-template-rows: repeat(3, 1fr); /* Divide a tela em 3 linhas iguais */
+    height: 100vh;
+}
+
+/* Estilos para a dropdown */
+.select-type {
+    grid-column: 2 / 3; /* A caixa de seleção ocupa a primeira coluna */
+    grid-row: 1 / 2; /* A caixa de seleção ocupa a primeira linha */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.select-type label {
+    display: block;
+    margin-bottom: 5px;
+    color: #ccc;
+}
+
+.select-type select {
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #555;
+    background-color: #444;
+    color: #ccc;
+}
+
+.card {
+    grid-column: 2 / 3; /* O card ocupa a segunda coluna */
+    grid-row: 2 / 3; /* O card ocupa a segunda linha */
+    border: 1px solid #555;
+    border-radius: 2vw; /* Utilizando uma unidade relativa */
+    padding: 2vw; /* Utilizando uma unidade relativa */
+    background-color: #333;
+    position: relative;
+}
+
+.header {
+    text-align: center;
+}
+
+.messages {
+    height: 40vh; /* Utilizando uma unidade relativa (viewport height) */
+    width: 28vw; /* Utilizando uma unidade relativa (viewport width) */
+    overflow-y: scroll;
+    border: 1px solid #555;
+    padding: 1.5vw; /* Utilizando uma unidade relativa */
+    background-color: #444;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.input {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.input input[type="text"] {
+    flex: 1;
+    padding: 10px;
+    background-color: #f2f2f2;
+    color: #333;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.input button {
+    margin-left: 10px; /* Adiciona margem à esquerda do botão */
+    padding: 10px 15px; /* Adiciona preenchimento ao botão */
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.3s ease;
+}
+
+.input button:hover {
+    background-color: #0056b3; /* Cor do botão ao passar o mouse */
+}
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+    color: #fff;
+    transform: scale(1.05);
+}
+
+button:focus {
+    outline: none;
+}
+
+.message {
+    margin-bottom: 1vh; /* Margem inferior em relação à altura da viewport */
+    padding: 1vw; /* Preenchimento em relação à largura da viewport */
+    border-radius: 2vw; /* Raio do border-radius em relação à largura da viewport */
+    max-width: 70vw; /* Largura máxima em relação à largura da viewport */
+    width: max-content;
+    word-wrap: break-word; /* Permite que o texto quebre para a próxima linha */
+    
+}
+
+.user-message, .bot-message {
+    margin-bottom: 1vh; /* Margem inferior em relação à altura da viewport */
+    padding: 0.7vw; /* Preenchimento em relação à largura da viewport */
+    border-radius: 5vw; /* Raio do border-radius em relação à largura da viewport */
+    max-width: 70vw; /* Largura máxima em relação à largura da viewport */
+    word-wrap: break-word; /* Permite que o texto quebre para a próxima linha */
+}
+
+.user-message {
+    background-color: #007bff;
+    color: #fff;
+    text-align: left; /* Alinha o texto à esquerda */
+    align-self: flex-end;
+    position: relative; /* Adiciona posição relativa para o ícone absoluto */
+    word-wrap: break-word;
+    padding-right: 1vw;
+}
+
+.user-message .message-icon {
+    position: absolute; /* Posiciona o ícone de forma absoluta */
+    bottom: -1.5vh; /* Desloca o ícone para baixo para que fique fora da bolha */
+    right: -1vw; /* Posiciona o ícone 1% a partir do lado direito da mensagem */
+    background-color: #0056b3; /* Cor da bolha do ícone */
+    width: 2vw; /* Largura da bolha do ícone */
+    height: 2vw; /* Altura da bolha do ícone */
+    border-radius: 50%; /* Forma circular da bolha do ícone */
+}
+
+.user-message .message-icon i {
+    color: #fff; /* Cor do ícone dentro da bolha */
+    font-size: 1vw; /* Tamanho do ícone em relação à largura da viewport */
+    position: absolute; /* Posicionamento absoluto do ícone dentro da bolha */
+    top: 50%; /* Alinha o ícone verticalmente ao centro */
+    left: 50%; /* Alinha o ícone horizontalmente ao centro */
+    transform: translate(-50%, -50%); /* Move o ícone de volta 50% do seu tamanho em ambas as direções */
+}
+
+.bot-message {
+    background-color: #28a745; /* Cor de fundo da mensagem do bot */
+    color: #fff; /* Cor do texto */
+    text-align: left; /* Alinha o texto à esquerda */
+    align-self: flex-start; /* Alinha a mensagem à esquerda */
+    position: relative; /* Adiciona posição relativa para o ícone absoluto */
+    word-wrap: break-word; /* Quebra de palavra para mensagens longas */
+    padding-left: 1vw;
+}
+
+.bot-message .message-icon {
+    position: absolute; /* Posiciona o ícone de forma absoluta */
+    bottom: -1.5vh; /* Desloca o ícone para baixo para que fique fora da bolha */
+    left: -1vw; /* Posiciona o ícone 1% a partir do lado esquerdo da mensagem */
+    background-color: #218838; /* Cor da bolha do ícone */
+    width: 2vw; /* Largura da bolha do ícone */
+    height: 2vw; /* Altura da bolha do ícone */
+    border-radius: 50%; /* Forma circular da bolha do ícone */
+}
+
+.bot-message .message-icon i {
+    color: #fff; /* Cor do ícone dentro da bolha */
+    font-size: 1vw; /* Tamanho do ícone em relação à largura da viewport */
+    position: absolute; /* Posicionamento absoluto do ícone dentro da bolha */
+    top: 50%; /* Alinha o ícone verticalmente ao centro */
+    left: 50%; /* Alinha o ícone horizontalmente ao centro */
+    transform: translate(-50%, -50%); /* Move o ícone de volta 50% do seu tamanho em ambas as direções */
+}
+
+.restart-button {
+    position: absolute;
+    top: 2vh;
+    right: 2vw;
+    cursor: pointer;
+    color: #666;
+}
+.entities-table {
+    grid-column: 3 / 4; /* A tabela ocupa a terceira coluna */
+    grid-row: 1 / -1; /* A tabela ocupa da primeira à última linha */
+    background-color: #333; /* Cor de fundo mais escura */
+    border-radius: 5%;
+    overflow: hidden;
+    padding: 5%;
+    color: #fff; /* Altera a cor do texto para claro */
+    align-self: center; /* Centraliza verticalmente */
+    margin: auto; /* Encosta do lado direito */
+}
+
+.entities-table table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.entities-table th,
+.entities-table td {
+    border: 1px solid #2e8b57; /* Cor das bordas (verde escuro) */
+    padding: 1vw;
+    text-align: center;
+    font-weight: bold;
+    color: #fff; /* Cor do texto */
+}
+
+.entities-table th {
+    background-color: #2e8b57; /* Cor de fundo para os cabeçalhos (verde escuro) */
+}
+
+.entities-table tbody tr:nth-child(even) {
+    background-color: #444; /* Cor de fundo para linhas pares */
+}
+/* Regras de mídia para tornar o layout mais responsivo */
+@media only screen and (max-width: 600px) {
+    .card {
+        width: 90%; /* Reduz a largura do card para telas menores */
+    }
+    .message {
+        max-width: 100%; /* Ajusta a largura máxima das mensagens para telas menores */
+    }
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Chatbot</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <link rel="stylesheet" href="./styles.css">
+    <!-- Adicione links para folhas de estilo CSS aqui, se necessário -->
+
+</head>
+<body>
+    <div class="container">
+        <div class="select-type">
+            <label for="chatbot-type">Choose the type of Flow:</label>
+            <select id="chatbot_type">
+                <option value="book_a_room">Book a Room</option>
+                <option value="spa">SPA</option>
+                <option value="quote">Request a quote</option>
+            </select>
+        </div>
+        <div class="card">
+            <div class="header">
+                <h1>Flow Example: Book a Room</h1>
+            </div>
+            <i class="fas fa-redo restart-button" id="restartButton"></i> <!-- Ícone de Reiniciar -->
+            <div class="messages">
+                <!-- Aqui serão exibidas as mensagens do chatbot -->
+            </div>
+            <div class="input">
+                <input type="text" placeholder="Digite sua mensagem...">
+                <button id="sendButton">Enviar</button>
+            </div>
+        </div>
+        <div class="entities-table">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Entity</th>
+                        <th>Data Collected</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Check in Date</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Check Out Date</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Nº Adults</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Nº Children</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Special Request</td>
+                        <td></td>
+                    </tr>
+                    <!-- Adicione mais linhas conforme necessário -->
+                </tbody>
+            </table>
+        </div>
+        
+    </div>
+    <!-- Adicione scripts JavaScript aqui, se necessário -->
+    <script src="./script.js"></script>
+    
+</body>
+</html>
